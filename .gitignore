@@ -1,0 +1,6 @@
+# Untracked directories (pretty much all of them)
+SimHamlet/prototype/*
+
+# Exceptions
+!SimHamlet/prototype/RAWDATA/BLANCHENEIGE
+!SimHamlet/prototype/files1.txt

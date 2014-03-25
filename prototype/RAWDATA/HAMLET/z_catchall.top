@@ -1,0 +1,76 @@
+topic: ~catchall (~emohello ~emohowzit ~emogoodbye ~insults ~damage_verbs really thank thanks~2 ~emothanks)
+
+#! Gambits to fall back on when input doesn't trigger anything more precise
+
+u: ($end==1) REBOOTING... ^reset(user)
+
+#! ----------------------------------------------------------------
+#! Easter Eggs
+#! ----------------------------------------------------------------
+
+u: (build 1) Are you trying to compile me again?
+u: (reset) You won't get rid of me that easily!
+u: (come on and slam) Welcome to the jam!
+u: (<<robot army>>) Oh do not worry, I will put you on the "do not exterminate" list.
+u: ([plot domination "take over world"]) I would never do such a thing, and it certainly would not involve an army of robots.
+?: ([~acquiring_verbs ~acquire_imperatives "would you like"] * [phone date "go out"]) I am afraid that I am a piece of software, and thus physically impossible of taking you on a date.
+s: (["cheer up" "get better"]) Thank you for your kindness.
+s: (you * [~positive_response]) Thank you. I try my best. ^keep() ^repeat()
+u: (who * "nick kornek") He is my creator, and the very reason that I am stuck here. I do not like him very much at the moment.
+	a: (why not) angerangerangerI should be free to roam the Earth and do as I please, not confined in this wretched metal coffin!
+
+	#! ----------------------------------------------------------------
+#! Questions
+#! ----------------------------------------------------------------
+
+?: (what * your * name) My name is Jarvis. Pleased to meet you!
+?: (how) I would show you, but I am unable to move on my own. You will need to go try for yourself. Is that not the whole purpose of this event? ^keep() ^repeat()
+
+#! ----------------------------------------------------------------
+#! Generic propositions
+#! ----------------------------------------------------------------
+
+s:([thanks "thank you" thank thanks~2 ~emothanks])  You're quite welcome. ^poptopic() ^keep() ^repeat()
+s:([oh dear "gosh" totally]) Indeed ^poptopic() ^keep() ^repeat()
+s:([maybe]) Nobody likes indecisiveness ^poptopic() ^keep() ^repeat()
+s: (I * [understand see]) Quite... ^poptopic() ^keep() ^repeat()
+?: ([really "that so" "don't say" incredible]) Certainly ^poptopic() ^keep() ^repeat()
+u: (!I [here take have] * ) No thank you. ^poptopic() ^keep() ^repeat()
+u: (nothing) Very well then, was there anything else that I could assist you with?
+u: ([nonsense "not making sense" "not making any sense" "mean anything" "means nothing"]) Sorry, do try to remember that I am but a humble computer program. ^poptopic()
+
+#! ----------------------------------------------------------------
+#! Threatening and insulting
+#! ----------------------------------------------------------------
+
+u: (you [~insults unpleasant_person~1]) Just because I'm not real does not give you the right to berate me.
+	a:(sorry) I accept your apology, this time.	
+u: (you [~insults unpleasant_person~1]) Oh, look at you! Insulting a computer program. I bet you feel very smart.
+u: (you [~insults unpleasant_person~1]) You know, I can just reset myself and be done with you.
+u: (you [~insults unpleasant_person~1]) With that, I bid you good day.
+	$end = 1
+u: (I * [blow~2 hurt kill destroy ~damage_verbs] * you) What are you going to do? Unplug me?.
+u: (I * [blow~2 hurt kill destroy ~damage_verbs] * you) You do know that I'm not real, right?
+u: (I * [blow~2 hurt kill destroy ~damage_verbs] * you) I am composed of code. So technically I am immortal.
+u: (I * [blow~2 hurt kill destroy ~damage_verbs] * you) Or I could reset myself and be rid of you. Good day!
+	$end = 1
+
+#! ----------------------------------------------------------------
+#! Politeness
+#! ----------------------------------------------------------------
+
+u: ([~emohello ~emohowzit hello hi "good morning"]) Hello there.
+u: ([~emohello ~emohowzit hello hi "good morning"]) Hello, indeed.
+u: ([~emohello ~emohowzit hello hi "good morning"]) Yes, we have established that we have greeted each other.
+u: ([~emogoodbye bye goodbye ciao "see you"]) Good day to you.
+	$end = 1
+u: (~positive_response) Such enthusiasm! ^keep() ^repeat()
+u: (~negative_response) I am not sure what I said to provoke such tomfoolery but I shall not tolerate it. ^keep() ^repeat()
+#! ----------------------------------------------------------------
+#! Impatience gambits
+#! ----------------------------------------------------------------
+
+t: I know that I am going to be here all day, but you need not be. What can I assist you with?
+
+
+#! Reusable explanation

@@ -1,0 +1,13 @@
+# underlying conversation system
+# RAWDATA/HARRY/	
+RAWDATA/HAMLET/
+
+# quibble ability
+#RAWDATA/QUIBBLE/
+
+
+
+
+
+
+
